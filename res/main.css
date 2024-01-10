@@ -1,0 +1,275 @@
+/* Video */
+.video-container {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 8px 20px rgba(var(--black), 0.4);
+}
+.video-container .video-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-container video {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 4px solid var(--white);
+}
+.play-button-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+.play-button-wrapper #circle-play-b {
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 0.3s ease;
+}
+.play-button-wrapper #circle-play-b:hover {
+    transform: scale(1.1);
+}
+.play-button-wrapper #circle-play-b svg {
+    width: 100px;
+    height: 100px;
+    fill: var(--white);
+    stroke: var(--white);
+    cursor: pointer;
+    background-color: rgba(var(--black), 0.2);
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+/* Document Styles */
+:root {
+    --white: #FFFFFF;
+    --yellow: #FDD601;
+    --off-white: #E9EFF6;
+    --black: #000000;
+    --dark-grey: #D1D1D1;
+    --off-grey: #EDEDED;
+    --green: #0BD60E;
+    --grey: #C7C9D1;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    background: var(--off-white);
+    overflow-x: hidden;
+}
+.banner {
+    width: 100%;
+    /*min-height: 476px;*/
+    min-height: 506px;
+    background: url(../assets/BTO-LP-BACKGROUND_01.png);
+    background-size: cover;
+    background-position: bottom;
+}
+.banner .banner-notes {
+    text-align: center;
+    max-width: 569px;
+    background: var(--yellow);
+    margin-left: auto;
+    margin-right: auto;
+    font: italic normal bold 16px/20px 'Open Sans';
+    letter-spacing: -0.16px;
+    padding: 5px 10px;
+}
+.banner img.person {
+    position: absolute;
+    left: 0;
+    margin-left: 76%;
+    margin-top: -40px;
+    z-index: 0;
+}
+.banner img.logo {
+    position: relative;
+    width: 65%;
+    margin: 20px auto;
+    z-index: 1;
+}
+.banner .banner-wrapper,
+.body .body-wrapper {
+    text-align: center;
+    max-width: 774px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.body {
+    z-index: 2;
+}
+.body .section-1 {
+    margin-top: -144px;
+    background: var(--white);
+    border: solid 10px var(--off-grey);
+}
+.body .section-1 p {
+    font: italic 400 20px/25px 'Lato';
+    letter-spacing: 0px;
+    max-width: 569px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.body .section-2 {
+    background: var(--black);
+    padding: 30px 58px;
+}
+.body .section-2 p {
+    color: var(--white);
+    text-align: center;
+    font: normal 500 24px/24px 'Lato';
+    letter-spacing: 0px;
+    max-width: 569px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+.form {
+    display: flex;
+    margin-top: 30px;
+}
+.form input {
+    width: 55%;
+    background: var(--white);
+    padding: 10px;
+    border: none;
+}
+.form button {
+    width: 45%;
+    padding: 10px;
+    text-align: center;
+    font: normal normal bold 33px/33px 'Lato';
+    letter-spacing: 0px;
+    background: var(--green);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.form button:hover {
+    transform: scale(1.1);
+}
+
+.body .section-3 {
+    background: var(--white);
+    padding: 30px 58px;
+}
+.body .section-3 p {
+    color: var(--black);
+    text-align: center;
+    font: italic normal 24px/24px 'Lato';
+    letter-spacing: 0px;
+    max-width: 569px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+.body .section-4 {
+    background: var(--black);
+    padding: 32px;
+}
+.body .section-4 p {
+    color: var(--white);
+    text-align: center;
+    font: italic 500 32px/31px 'Lato';
+    letter-spacing: 0px;
+    margin-top: 0px;
+}
+.body .section-4.w-arrows {
+    margin-bottom: -100px;
+    position: relative;
+}
+
+.body .section-4.w-arrows::after {
+    content: '';
+    position: absolute;
+    background: url(../assets/arrow-red.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    aspect-ratio: 1/1;
+    left: calc(100% + 20px);
+    top: 0px;
+}
+.body .section-4.w-arrows::before {
+    content: '';
+    position: absolute;
+    background: url(../assets/arrow-red-alt.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    aspect-ratio: 1/1;
+    right: calc(100% + 20px);
+    top: 0px;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 767px) {
+    .banner img.logo {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .body-wrapper {
+        width: 95%;
+    }
+    .banner img.person {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner .banner-notes p {
+        font-size: 14px;
+    }
+    .body section {
+        padding: 20px !important;
+    }
+    .body .section-1 p,
+    .body .section-3 p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .body .section-2 p,
+    .body .section-4 p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .form input {
+        width: 50%;
+    }
+    .form button {
+        width: 50%;
+        font-size: 18px;
+    }
+}
+
+/* Animations */
+.body .section-4.w-arrows::before,
+.body .section-4.w-arrows::after {
+    animation: animate-pulse 0.5s infinite;
+}
+@keyframes animate-pulse {
+    0% { transform: scale(0.75) }
+    50% { transform: scale(1) }
+    100% { transform: scale(0.75) }
+}
